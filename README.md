@@ -1,3 +1,3 @@
 # Automatizações de testes - Fraenum
 
-Automatizações de testes feitas durante o meu trabalho na empresa Fraenum, utilizando a linguagem Cypress.
+Automatizações de testes criadas, alteradas, e mantidas durante a minha jornada de trabalho na empresa Fraenum. Desenvolvidas através do framework Cypress para JavaScript.
