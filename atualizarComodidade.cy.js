@@ -1,94 +1,96 @@
+// Credenciais alteradas para preservação e segurança da aplicação
+
 ///<reference types="cypress"/>
 
-describe('atualizarComunidade', () => {
+describe('atualizarComodidade', () => {
 
-  it('atualizarComunidade', () => {
-      // Entrando no site
-      
-      cy.visit('http://backoffice.360suites.com.br/')
-      
-      // Digitando o email
+  it('atualizarComodidade', () => {
+    // Entrando no site
 
-      cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Email')
-      .click({force: true})
-      .type('dan@360suites.com.br')
+    cy.visit('*****')
 
-      // Digitando a senha
+    // Digitando o email
 
-      cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Senha')
-      .click({force: true})
-      .type('F@B3rc4st3l')
-      
-      // Clicando em entrar
+    cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Email')
+      .click({ force: true })
+      .type('*****')
 
-      cy.contains('[class="block"]', 'Entrar')
+    // Digitando a senha
+
+    cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Senha')
+      .click({ force: true })
+      .type('*****')
+
+    // Clicando em entrar
+
+    cy.contains('[class="block"]', 'Entrar')
       .click()
       .wait(5000)
 
-      // Abrindo menu lateral
+    // Abrindo menu lateral
 
-      cy.contains('[class="q-icon notranslate material-icons"]', 'menu')
+    cy.contains('[class="q-icon notranslate material-icons"]', 'menu')
       .click()
 
-      // Abrir Cadastros Site
+    // Abrir Cadastros Site
 
-      cy.contains('[class="q-item__label"]', 'Cadastros Site')
+    cy.contains('[class="q-item__label"]', 'Cadastros Site')
       .click()
 
-      // Abrir comodidades
+    // Abrir comodidades
 
-      cy.contains('[class="q-item__section column q-item__section--main justify-center"]', 'Comodidades')
+    cy.contains('[class="q-item__section column q-item__section--main justify-center"]', 'Comodidades')
       .click()
       .wait(2500)
 
-      // Atualizar comodidade
+    // Atualizar comodidade
 
-      cy.contains('[class="text-center"]', 'ATESTE 1')
-        .next()
-        .next()
-        .next()
-        .next()
-        .next()
-        .next()
-        .find('[class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round text-primary q-btn--actionable q-focusable q-hoverable"]')
-        .click({force:true})
+    cy.contains('[class="text-center"]', 'ATESTE 1')
+      .next()
+      .next()
+      .next()
+      .next()
+      .next()
+      .next()
+      .find('[class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round text-primary q-btn--actionable q-focusable q-hoverable"]')
+      .click({ force: true })
 
-      // Código(Versão mais recente da aplicação em 09/03/2023 não aceita alteração do nome do código)
+    // Código(Versão mais recente da aplicação em 09/03/2023 não aceita alteração do nome do código)
 
-      // cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Código')
-      // .click()
-      // .type('{selectall}{backspace}')
-      // .type('AutoTeste')
+    // cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Código')
+    // .click()
+    // .type('{selectall}{backspace}')
+    // .type('AutoTeste')
 
-      // Descrição
+    // Descrição
 
-      cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Descrição')
+    cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Descrição')
       .click()
       .type('AutoTeste')
 
-      // Ícone
+    // Ícone
 
-      cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Ícone')
+    cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Ícone')
       .click()
 
-      // Selecionar Ícone
+    // Selecionar Ícone
 
-      cy.get('body')
-      .click(255, 105) 
+    cy.get('body')
+      .click(255, 105)
 
-      // Categoria
-      cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Categoria')
+    // Categoria
+    cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'Categoria')
       .click()
 
-      // Selecionar categoria
+    // Selecionar categoria
 
-      cy.contains('[class="q-item__label"]', 'Quarto')
+    cy.contains('[class="q-item__label"]', 'Quarto')
       .click()
-      
-      // Salvar
 
-      //cy.contains('[class="block"]', 'Salvar')
-      //.click()
+    // Salvar
+
+    //cy.contains('[class="block"]', 'Salvar')
+    //.click()
 
   })
 })

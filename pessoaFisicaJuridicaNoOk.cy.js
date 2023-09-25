@@ -1,73 +1,75 @@
+// Credenciais alteradas para preservação e segurança da aplicação
+
 ///<reference types="cypress"/>
 
 describe('pessoaFisicaJuridicaNoOK', () => {
 
   it('pessoaFisicaJuridicaNoOK', () => {
-      // Entrando no site
-      
-      cy.visit('http://backoffice.360suites.com.br/')
-      
-      // Digitando o email
+    // Entrando no site
 
-      cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Email')
-      .click({force: true})
-      .type('dan@360suites.com.br')
+    cy.visit('*****')
 
-      // Digitando a senha
+    // Digitando o email
 
-      cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Senha')
-      .click({force: true})
-      .type('F@B3rc4st3l')
-      
-      // Clicando em entrar
+    cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Email')
+      .click({ force: true })
+      .type('*****')
 
-      cy.contains('[class="block"]', 'Entrar')
+    // Digitando a senha
+
+    cy.contains('[class="q-field__inner relative-position col self-stretch"]', 'Senha')
+      .click({ force: true })
+      .type('*****')
+
+    // Clicando em entrar
+
+    cy.contains('[class="block"]', 'Entrar')
       .click()
       .wait(5000)
 
-      // Abrindo menu lateral
+    // Abrindo menu lateral
 
-      cy.contains('[class="q-icon notranslate material-icons"]', 'menu')
+    cy.contains('[class="q-icon notranslate material-icons"]', 'menu')
       .click()
 
-      // Abrir Investidor
+    // Abrir Investidor
 
-      cy.contains('[class="q-item__label"]', 'Investidor')
+    cy.contains('[class="q-item__label"]', 'Investidor')
       .click()
 
-      // Abrir usuários
+    // Abrir usuários
 
-      cy.contains('[class="q-item__section column q-item__section--main justify-center"]', 'Usuários Investidores')
+    cy.contains('[class="q-item__section column q-item__section--main justify-center"]', 'Usuários Investidores')
       .click()
 
-      // Atualizar usuário
+    // Atualizar usuário
 
-      cy.contains('[class="q-td text-center"]', '2')
-        .parents('[class="q-tr "]')
-        .find('[name="update"]')
-        .click({force:true})
+    cy.contains('[class="q-td text-center"]', '2')
+      .parents('[class="q-tr "]')
+      .find('[name="update"]')
+      .click({ force: true })
 
-      // Selecionando pessoa fisica
+    // Selecionando pessoa fisica
 
-      cy.contains('[class="block"]', 'Pessoa Física')
+    cy.contains('[class="block"]', 'Pessoa Física')
       .click()
 
-      // Alterar CPF
+    // Alterar CPF
 
-      cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'CPF')
+    cy.contains('[class="q-field__control-container col relative-position row no-wrap q-anchor--skip"]', 'CPF')
       .click()
       .type('{selectall}{backspace}')
       .type('07486105888')
 
-      // Selecionando pessoa jurídica e cancelando a alteração de cpf
+    // Selecionando pessoa jurídica e cancelando a alteração de cpf
 
-      cy.contains('[class="block"]', 'Pessoa Jurídica')
+    cy.contains('[class="block"]', 'Pessoa Jurídica')
       .click()
 
-      // Salvar
+    // Salvar
 
-      //cy.contains('[class="block"]', 'Salvar')
-      //.click()
+    //cy.contains('[class="block"]', 'Salvar')
+    //.click()
 
   })
 })
